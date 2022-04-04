@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: client-
+spec:
+  template:
+    spec:
+      containers:
+      - name: client
+        image: localhost/ppm-prototype-client
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: RUST_LOG
+          value: debug
+        volumeMounts:
+        - mountPath: /root/.config/ppm-prototype
+          name: config-volume
+          readOnly: true
+      volumes:
+      - configMap:
+          name: ppm-config
+        name: config-volume
+      restartPolicy: Never

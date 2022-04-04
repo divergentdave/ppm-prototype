@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: leader
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: leader
+  template:
+    metadata:
+      labels:
+        app: leader
+    spec:
+      containers:
+      - name: leader
+        image: localhost/ppm-prototype-leader
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: RUST_LOG
+          value: debug
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        volumeMounts:
+        - mountPath: /root/.config/ppm-prototype
+          name: config-volume
+          readOnly: true
+      volumes:
+      - configMap:
+          name: ppm-config
+        name: config-volume

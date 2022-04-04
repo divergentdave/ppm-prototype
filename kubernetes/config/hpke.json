@@ -1,0 +1,26 @@
+{
+    "helper": {
+        "id": 0,
+        "kem_id": 32,
+        "kdf_id": 1,
+        "aead_id": 3,
+        "public_key": "AxQD9drajWr0IIkH747su98o4hRnzn9vySujgWFK/ks=",
+        "private_key": "yIiKUq4NojPVXgsPjaemLNhjtCTU5lVZQ4vHtWyG+lk="
+    },
+    "leader": {
+        "id": 1,
+        "kem_id": 32,
+        "kdf_id": 1,
+        "aead_id": 3,
+        "public_key": "FEWF3BVJI+KRqnq46BtugiqTV4B0gxP5XCZXdjs0Www=",
+        "private_key":"SME/6Oy2vLvNY6M1MNfVjV4p7WKoHbnR3WZKotBMFGg="
+    },
+    "collector":  {
+        "id": 2,
+        "kem_id": 32,
+        "kdf_id": 1,
+        "aead_id": 3,
+        "public_key":"sqKGJNLZMCT2MK4doZHoJGO6A6CS3kPzAqxJnyeriVI=",
+        "private_key":"IOJtnYY4lLy5i46QOq12GQQN8o8kCNLgCDjiVV1ZWlo="
+    }
+}

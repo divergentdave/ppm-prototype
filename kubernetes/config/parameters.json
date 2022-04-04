@@ -1,0 +1,27 @@
+{
+    "task_id": "AAECAwQFBgcICQoLDA0ODwABAgMEBQYHCAkKCwwNDg8=",
+    "aggregator_endpoints": [
+        "http://leader.default.svc.cluster.local:80",
+        "http://helper.default.svc.cluster.local:80"
+    ],
+    "collector_config": {
+        "id": 2,
+        "kem_id": 32,
+        "kdf_id": 1,
+        "aead_id": 3,
+        "public_key": "sqKGJNLZMCT2MK4doZHoJGO6A6CS3kPzAqxJnyeriVI="
+    },
+    "max_batch_lifetime": 1,
+    "min_batch_size": 100,
+    "min_batch_duration": 50,
+    "vdaf": {
+        "Prio3Sum64": {
+            "bits": 64
+        }
+    },
+    "aggregator_auth_key": "AAECAwQFBgcICQoLDA0ODwABAgMEBQYHCAkKCwwNDg8=",
+    "vdaf_verification_parameter": [
+	"yyz6U43J49pG89srEiLS8QA=",
+	"yyz6U43J49pG89srEiLS8QE="
+    ]
+}

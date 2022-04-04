@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: collector-
+spec:
+  template:
+    spec:
+      containers:
+      - name: collector
+        image: localhost/ppm-prototype-collector
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: RUST_LOG
+          value: debug
+        volumeMounts:
+        - mountPath: /root/.config/ppm-prototype
+          name: config-volume
+          readOnly: true
+      volumes:
+      - configMap:
+          name: ppm-config
+        name: config-volume
+      restartPolicy: Never
